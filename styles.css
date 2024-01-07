@@ -30,11 +30,6 @@ nav a {
     
 }
 
-nav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
 .pageTitle {
     color: #fff;
     text-align: center;
@@ -44,7 +39,7 @@ nav a:hover {
 }
 
 
-.pageTitle1{
+.pageArticleTitle{
     color: #fff;
     text-align:start;
     margin-top: 50px;
@@ -321,7 +316,7 @@ input[type="submit"] {
 .smallParagraph {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    color: #2c648a;
+    color: yellow;
     margin-bottom: 20px;
     margin-top: 10px;
     margin-left: 80px;
