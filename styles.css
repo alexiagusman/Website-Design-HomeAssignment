@@ -14,7 +14,6 @@ h1 {
 
 nav {
     background-color: #2c648a;
-    overflow: hidden;
     text-align: center; 
     border: 4px solid #030303; 
 }
@@ -24,7 +23,7 @@ nav a {
     color: #fff;
     text-align: center;
     padding: 50px 180px; 
-    text-decoration: none;
+    text-decoration: none; /* To remove the underline off the nav bar links*/
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     
@@ -32,7 +31,7 @@ nav a {
 
 .pageTitle {
     color: #fff;
-    text-align: center;
+    text-align: center; /* To align the main pages title in the center*/
     margin-top: 50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px; 
@@ -41,19 +40,25 @@ nav a {
 
 .pageArticleTitle{
     color: #fff;
-    text-align:start;
+    text-align:start; /* To align the article pages title on the left*/
     margin-top: 50px;
     margin-left: 100px;
     font-family: 'Montserrat', sans-serif;
     font-size: 40px;
-    text-decoration: underline; 
+    text-decoration: underline; /* To add the underline on the article page*/
+}
+
+.imageContainerHome{
+display: flex; /* Used flex since only 3 rows were used in home page*/
+justify-content: center; /* Used justified content since its a row*/
+gap:350px;
 }
 
 .imageGrid {
     display: grid;
-    grid-template-columns: repeat(3, 2fr); /* Create three equal columns */
-    gap: 100px; /* Add some gap between grid items */
-    margin-top: 10px; /* Adjust margin to separate the grid from the title */
+    grid-template-columns: repeat(3, 2fr); /* Used grid since there were 6 rows therefore two dimensional in the article page*/
+    gap: 100px; 
+    margin-top: 10px;
 }
 
 .gridItem {
@@ -64,35 +69,33 @@ nav a {
 .gridItem img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; 
-    border: 2px solid #030303; 
+    border: 2px solid #030303;  /* Added border*/
 }
 
 .gridItem h3 {
-    margin: 10px 0;
+    margin-top: 8px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: slateblue;
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 20px; /* Padding top , Padding right*/
     background-color: #2c648a;
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* To remove the underline off the nav bar links*/
     cursor: pointer;
     border-radius: 4px;
 }
 
 .button:hover {
-    background-color: #a04577;
+    background-color: #a04577; /* Hover when hovering on article view buttons*/
 }
 
 
 .whyBox {
     background-color: #161414;
-    padding:5px;
+    padding-top:5px;
     margin-top: 150px;
     border: 2px solid #2c648a;
     border-radius: 8px;
@@ -107,19 +110,18 @@ nav a {
 .whyText {
     color: #e9c8c8;
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
 }
 
 footer {
-    text-align: right;
+    text-align: right; /* Align button on the right of the page*/
 }
 
 .footerButton {
-    display: inline-block;
-    padding: 15px 30px;
+    display: inline-block; /* Used inline block to cover only where the button has text*/
+    padding: 15px 30px; /* padding-top,padding-right*/
     background-color: #2c648a;
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; /* To remove the underline off the footer link*/
     border-radius: 5px;
     margin-top: 40px;
 }
@@ -137,27 +139,26 @@ footer {
 }
 
 
-.imageGridAbout{
-    display: grid;
-    grid-template-columns: repeat(2, 2fr); 
-    gap: 100px; 
+.imageContainerAbout{
+    display: flex; /* Used flex since only 2 rows were used in home page in the same row*/
+    gap: 500px;  /*gap for the rows in the flex*/
+    justify-content: center; /* Used justified content since its a row*/
     margin-top: 50px; 
 }
 
 .gridItemAbout{
     text-align: center;
-    height: 350px;
+    height: 300px; /* Height for the grid for each container*/
 }
 
 .gridItemAbout img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; 
     border: 2px solid #030303; 
 }
 
 .gridItemAbout h3 {
-    margin: 10px 0;
+    margin-top: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     color: slateblue;
@@ -167,19 +168,19 @@ footer {
 .footerAbout{
     background-color: #2c648a;
     border-top: 4px solid #030303;
-    padding: 20px;
+    padding-top: 20px;
     margin-top: 180px;
 }
 
 .bottomContainer {
-    display: flex;
+    display: flex; /* Used flex since only 3 containers were used in about page in the same row*/
     justify-content: space-between;
     align-items: center;
 }
 
 .leftContent,
 .rightContent {
-    flex: 1;
+    flex: 1; /*Putting the rateus div on the left*/
     text-align: center;
 }
 .leftContent h3{
@@ -190,12 +191,12 @@ footer {
 }
 
 .middleContent {
-    flex: 2;
+    flex: 2; /*Putting the slider div in the center*/
     text-align: center;
 }
 
 .slider {
-    width: 50%; 
+    width: 70%; 
 }
 
 .bottomContainer img {
@@ -218,16 +219,16 @@ footer {
 
 
 .contactContainer {
-    display: flex;
+    display: flex; /* Used flex since only 2 containers were used in contact page in the same row*/
     justify-content: space-between;
     margin: 20px;
 }
 
 .contactForm {
-    flex: 1;
-    display: flex;
+    flex: 1;  /*Putting the form div on the left*/
+    display: flex; /*used a seperate flex for the form*/
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /*On the left*/
 }
 
 .formSection {
@@ -250,7 +251,7 @@ textarea {
     border-radius: 5px;
 }
 
-input[type="submit"] {
+input[type="submit"] { /*button*/
     background-color: #2c648a;
     color: #fff;
     border-radius: 2px;
@@ -258,7 +259,7 @@ input[type="submit"] {
 }
 
 .contactImage {
-    flex: 1;
+    flex: 1; /*Putting the form div on the left but using margin left to push to the right*/
     margin-left: 20px;
 }
 
@@ -268,32 +269,16 @@ input[type="submit"] {
     border: 2px solid #030303;
 }
 
-.pageTitle1 {
-    color: #fff;
-    text-align: start;
-    margin-top: 50px;
-    margin-left: 100px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 40px;
-    text-decoration: underline;
-}
 
-.articlePage {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 20px;
-}
-
-.articleContent {
-    display: flex;
+.articleContent { 
+    display: flex; /*used a seperate flex for the articles page*/
     justify-content: space-between;
 }
 
 .articleInfo {
-    flex: 1;
+    flex: 1; /*Putting the form div on the left*/
     text-align: start;
-    margin:-30px;
+    margin-top:-30px;
     margin-left: 0px;
 }
 
@@ -310,7 +295,7 @@ input[type="submit"] {
     max-height: 100%;
     object-fit: cover;
     border: 2px solid #030303;
-    margin-top: 10px; /* Adjust as needed */
+    margin-top: 10px; 
 }
 
 .smallParagraph {
@@ -323,7 +308,7 @@ input[type="submit"] {
 }
 
 .articleText {
-    flex: 1;
+    flex: 1; /*Putting the form div on the left*/
     text-align: start;
     margin-left: 100px;
     margin-top: 20px;
